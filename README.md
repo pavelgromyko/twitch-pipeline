@@ -25,6 +25,16 @@ flowchart LR
 | `staging` | Flattened, typed Parquet, partitioned by day (`rank`, dedup, "no category" label) |
 | ClickHouse | `stream_snapshots` (fact table), `dim_games` (genres from IGDB), views `latest_snapshot` and `last_day` |
 
+## Dashboards
+
+Screenshots taken on 2026-11-27. Metrics are computed among the top-2000 streams.
+
+### Twitch overview: current snapshot
+![Twitch overview](docs/images/twitch-overview.jpg)
+
+### Audience structure: languages, concentration, genres
+![Audience structure](docs/images/audience-structure.jpg)
+
 ## Stack
 
 Docker Compose, MinIO (S3), Spark 3.5.3, Airflow 3.4.0 (LocalExecutor), ClickHouse 26.10.4.207, Superset, Python 3.12.
