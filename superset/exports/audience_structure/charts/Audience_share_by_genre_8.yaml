@@ -1,0 +1,78 @@
+slice_name: Audience share by genre (%)
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 5__table
+  viz_type: echarts_timeseries_bar
+  x_axis: genre_name
+  time_grain_sqla: P1D
+  x_axis_sort: MAX(share_pct)
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: share_pct
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 32
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: Nullable(Float64)
+      type_generic: null
+      verbose_name: null
+      warning_markdown: null
+    aggregate: MAX
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: MAX(share_pct)
+    optionName: metric_o2tmbmndc4_7o4v8t0tpxl
+  groupby: []
+  adhoc_filters: []
+  order_desc: true
+  row_limit: 10
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  orientation: horizontal
+  x_axis_title: ''
+  x_axis_title_margin: 15
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  show_value: true
+  only_total: true
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  xAxisLabelRotation: 0
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  rich_tooltip: true
+  tooltipTimeFormat: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: '{"datasource":{"id":5,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"P1D","columnType":"BASE_AXIS","sqlExpression":"genre_name","label":"genre_name","expressionType":"SQL"}],"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"share_pct","description":null,"expression":null,"filterable":true,"groupby":true,"id":32,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"Nullable(Float64)","type_generic":null,"verbose_name":null,"warning_markdown":null},"aggregate":"MAX","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"MAX(share_pct)","optionName":"metric_o2tmbmndc4_7o4v8t0tpxl"}],"orderby":[[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"share_pct","description":null,"expression":null,"filterable":true,"groupby":true,"id":32,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"Nullable(Float64)","type_generic":null,"verbose_name":null,"warning_markdown":null},"aggregate":"MAX","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"MAX(share_pct)","optionName":"metric_o2tmbmndc4_7o4v8t0tpxl"},false]],"annotation_layers":[],"row_limit":10,"series_columns":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["genre_name"],"columns":[],"aggregates":{"MAX(share_pct)":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"sort","options":{"by":"MAX(share_pct)","ascending":true}},{"operation":"flatten"}]}],"form_data":{"datasource":"5__table","viz_type":"echarts_timeseries_bar","x_axis":"genre_name","time_grain_sqla":"P1D","x_axis_sort":"MAX(share_pct)","x_axis_sort_asc":true,"x_axis_sort_series":"name","x_axis_sort_series_ascending":true,"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"share_pct","description":null,"expression":null,"filterable":true,"groupby":true,"id":32,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"Nullable(Float64)","type_generic":null,"verbose_name":null,"warning_markdown":null},"aggregate":"MAX","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"MAX(share_pct)","optionName":"metric_o2tmbmndc4_7o4v8t0tpxl"}],"groupby":[],"adhoc_filters":[],"order_desc":true,"row_limit":10,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"orientation":"horizontal","x_axis_title":"","x_axis_title_margin":15,"y_axis_title_margin":15,"y_axis_title_position":"Left","sort_series_type":"sum","color_scheme":"supersetColors","show_value":true,"only_total":true,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","xAxisLabelRotation":0,"y_axis_format":"SMART_NUMBER","truncateXAxis":true,"y_axis_bounds":[null,null],"rich_tooltip":true,"tooltipTimeFormat":"smart_date","extra_form_data":{},"dashboards":[2],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: bb6d38ae-c527-4ece-9f63-a81f8ca5e3eb
+version: 1.0.0
+dataset_uuid: 7ae67aad-2047-4166-89fc-91e23a849d33

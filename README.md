@@ -35,6 +35,19 @@ Screenshots taken on 2026-11-27. Metrics are computed among the top-2000 streams
 ### Audience structure: languages, concentration, genres
 ![Audience structure](docs/images/audience-structure.jpg)
 
+### Dashboard definitions
+Dashboards, charts and datasets are exported to `superset/exports/` (one folder per dashboard)
+so they live in Git, not only inside the Superset container volume.
+SQL of the virtual datasets is also in `sql/05_superset_datasets.sql`.
+
+To restore a dashboard: zip a folder together with its top-level directory
+(for example `twitch_overview`), then in Superset open Dashboards, Import, upload the zip
+and enter the ClickHouse password when asked: it is masked in the export.
+Import on a clean Superset instance has not been verified yet.
+
+Before committing anything, run `.\scripts\check_secrets.ps1` from the project root:
+it looks for values from your `.env` in the files.
+
 ## Stack
 
 Docker Compose, MinIO (S3), Spark 3.5.3, Airflow 3.4.0 (LocalExecutor), ClickHouse 26.10.4.207, Superset, Python 3.12.

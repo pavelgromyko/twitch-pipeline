@@ -1,0 +1,49 @@
+slice_name: Snapshot time (UTC)
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 2__table
+  viz_type: table
+  query_mode: aggregate
+  groupby:
+  - snapshot_ts
+  temporal_columns_lookup:
+    snapshot_ts: true
+    started_at: true
+  metrics:
+  - count
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    subject: snapshot_ts
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  allow_render_html: true
+  column_config:
+    count:
+      d3SmallNumberFormat: ',d'
+      d3NumberFormat: ',d'
+  show_cell_bars: true
+  color_pn: true
+  comparison_color_scheme: Green
+  conditional_formatting: []
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 1
+query_context: '{"datasource":{"id":2,"type":"table"},"force":false,"queries":[{"filters":[{"col":"snapshot_ts","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["snapshot_ts"],"metrics":["count"],"orderby":[["count",false]],"annotation_layers":[],"row_limit":1000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[],"time_offsets":[]}],"form_data":{"datasource":"2__table","viz_type":"table","query_mode":"aggregate","groupby":["snapshot_ts"],"temporal_columns_lookup":{"snapshot_ts":true,"started_at":true},"metrics":["count"],"all_columns":[],"percent_metrics":[],"adhoc_filters":[{"clause":"WHERE","subject":"snapshot_ts","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"order_by_cols":[],"row_limit":1000,"server_page_length":10,"order_desc":true,"table_timestamp_format":"smart_date","allow_render_html":true,"column_config":{"count":{"d3SmallNumberFormat":",d","d3NumberFormat":",d"}},"show_cell_bars":true,"color_pn":true,"comparison_color_scheme":"Green","conditional_formatting":[],"comparison_type":"values","extra_form_data":{},"dashboards":[1],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 60a40d76-0296-4756-b022-a48073576fd5
+version: 1.0.0
+dataset_uuid: 560b3e5b-13d7-419e-beff-9e604314d715

@@ -1,0 +1,104 @@
+dashboard_title: Last 24 hours
+description: null
+css: null
+slug: null
+certified_by: null
+certification_details: null
+published: false
+uuid: 07a868fd-af44-496a-b669-c01a1d5d7470
+metadata:
+  chart_configuration:
+    '9':
+      id: 9
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 10
+    '10':
+      id: 10
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 9
+    - 10
+  shared_label_colors:
+    Grand Theft Auto VI: '#1FA8C9'
+    Just Chatting: '#454E7C'
+    World of Warcraft: '#5AC189'
+    League of Legends: '#FF7F44'
+    Counter-Strike: '#666666'
+    viewers_per_snapshot: '#1FA8C9'
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  color_scheme: ''
+  label_colors: {}
+  color_scheme_domain: []
+  cross_filters_enabled: true
+position:
+  DASHBOARD_VERSION_KEY: v2
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  GRID_ID:
+    children:
+    - ROW-N-B5B069XF
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Last 24 hours
+    type: HEADER
+  ROW-N-B5B069XF:
+    children:
+    - CHART-WFJY46T5
+    - CHART-U0YEOVPG
+    id: ROW-N-B5B069XF
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-WFJY46T5:
+    children: []
+    id: CHART-WFJY46T5
+    meta:
+      chartId: 9
+      height: 50
+      sliceName: Total viewers over time
+      uuid: 1af2c0aa-4542-4ddd-bdd9-397a27bd00a9
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-B5B069XF
+  CHART-U0YEOVPG:
+    children: []
+    id: CHART-U0YEOVPG
+    meta:
+      chartId: 10
+      height: 50
+      sliceName: Top 5 games over time
+      uuid: e9b635b7-5bed-46ac-8131-26523901f530
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-B5B069XF
+version: 1.0.0
