@@ -30,10 +30,10 @@ flowchart LR
 Screenshots taken on 2026-11-27. Metrics are computed among the top-2000 streams.
 
 ### Twitch overview: current snapshot
-![Twitch overview](docs/images/twitch-overview.png)
+![Twitch overview](docs/images/twitch-overview.jpg)
 
 ### Audience structure: languages, concentration, genres
-![Audience structure](docs/images/audience-structure.png)
+![Audience structure](docs/images/audience-structure.jpg)
 
 ## Stack
 
