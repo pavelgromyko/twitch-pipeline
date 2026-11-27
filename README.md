@@ -35,6 +35,9 @@ Screenshots taken on 2026-11-27. Metrics are computed among the top-2000 streams
 ### Audience structure: languages, concentration, genres
 ![Audience structure](docs/images/audience-structure.jpg)
 
+### Last 24 hours: total viewers and top-5 games
+![Last 24 hours](docs/images/last-24-hours.jpg)
+
 ### Dashboard definitions
 Dashboards, charts and datasets are exported to `superset/exports/` (one folder per dashboard),
 so they live in Git, not only inside the Superset container volume.
