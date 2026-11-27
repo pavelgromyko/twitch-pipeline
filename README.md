@@ -36,17 +36,23 @@ Screenshots taken on 2026-11-27. Metrics are computed among the top-2000 streams
 ![Audience structure](docs/images/audience-structure.jpg)
 
 ### Dashboard definitions
-Dashboards, charts and datasets are exported to `superset/exports/` (one folder per dashboard)
+Dashboards, charts and datasets are exported to `superset/exports/` (one folder per dashboard),
 so they live in Git, not only inside the Superset container volume.
 SQL of the virtual datasets is also in `sql/05_superset_datasets.sql`.
 
-To restore a dashboard: zip a folder together with its top-level directory
-(for example `twitch_overview`), then in Superset open Dashboards, Import, upload the zip
-and enter the ClickHouse password when asked: it is masked in the export.
-Import on a clean Superset instance has not been verified yet.
+To restore the dashboards:
 
-Before committing anything, run `.\scripts\check_secrets.ps1` from the project root:
-it looks for values from your `.env` in the files.
+1. Make sure ClickHouse has the tables and views (`sql/01_create_table.sql`, `03_views.sql`, `04_dim_games.sql`)
+   and data (run the Airflow DAGs).
+2. Build the zip files: `.\scripts\pack_superset_exports.ps1` (creates `superset/dist/*.zip`).
+3. In Superset: Dashboards, Import, upload the zips one by one (`twitch_overview` first)
+   and enter the ClickHouse password when asked (it is masked in the export).
+
+Import was verified on a clean Superset instance (2026-11-28). To get one:
+`docker compose --profile bi-test up -d superset-test` (http://localhost:8089, admin / admin123,
+throwaway container without a volume).
+
+Before committing anything, run `.\scripts\check_secrets.ps1` from the project root.
 
 ## Stack
 
