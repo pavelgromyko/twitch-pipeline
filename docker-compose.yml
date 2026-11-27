@@ -85,6 +85,21 @@ services:
       - superset_home:/app/superset_home
       - ./docker/superset_config.py:/app/pythonpath/superset_config.py:ro
 
+  superset-test:
+    image: twitch-superset:local
+    container_name: superset-test
+    profiles: ["bi-test"]
+    ports:
+      - "8089:8088"
+    environment:
+      SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY}
+    volumes:
+      - ./docker/superset_config.py:/app/pythonpath/superset_config.py:ro
+    command:
+      - bash
+      - -c
+      - superset db upgrade && superset fab create-admin --username admin --firstname Admin --lastname User --email admin@example.com --password admin123 && superset init && /usr/bin/run-server.sh
+
   airflow-postgres:
     image: postgres:16
     profiles: ["airflow"]
