@@ -1,0 +1,76 @@
+table_name: genre_audience
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: null
+schema: twitch
+sql: "WITH\r\n    genre_freq AS (\r\n        SELECT genre, count() AS games\r\n  \
+  \      FROM twitch.dim_games\r\n        ARRAY JOIN genres AS genre\r\n        GROUP\
+  \ BY genre\r\n    ),\r\n    main_genre AS (\r\n        SELECT g.game_id AS game_id,\
+  \ argMax(g.genre, f.games) AS genre\r\n        FROM (SELECT game_id, genre FROM\
+  \ twitch.dim_games ARRAY JOIN genres AS genre) AS g\r\n        INNER JOIN genre_freq\
+  \ AS f ON g.genre = f.genre\r\n        GROUP BY g.game_id\r\n    )\r\nSELECT\r\n\
+  \    if(m.genre = '', 'Unknown', m.genre) AS genre_name,\r\n    sum(s.viewer_count)\
+  \ AS viewers,\r\n    round(100 * sum(s.viewer_count) / (SELECT sum(viewer_count)\
+  \ FROM twitch.latest_snapshot), 1) AS share_pct\r\nFROM twitch.latest_snapshot AS\
+  \ s\r\nLEFT JOIN main_genre AS m ON s.game_id = m.game_id\r\nGROUP BY genre_name\r\
+  \nORDER BY viewers DESC"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 7ae67aad-2047-4166-89fc-91e23a849d33
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: share_pct
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Nullable(Float64)
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: viewers
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: genre_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 787097ea-9dff-40d9-afe4-abf2a3778082

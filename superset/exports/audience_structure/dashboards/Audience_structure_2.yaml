@@ -1,0 +1,185 @@
+dashboard_title: Audience structure
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: d703a4cb-d39e-4271-ab1b-2c6a24fc65d8
+position:
+  CHART-explore-5-1:
+    children: []
+    id: CHART-explore-5-1
+    meta:
+      chartId: 5
+      height: 50
+      sliceName: Audience share by language (%)
+      uuid: 14eee6fd-bc84-4fc5-8fe8-13c823847825
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-W3A9VnNVz2z7FJjD_VMJv
+    type: CHART
+  CHART-explore-6-1:
+    children: []
+    id: CHART-explore-6-1
+    meta:
+      chartId: 6
+      height: 50
+      sliceName: Top-3 streamers share by game (%)
+      uuid: 29c5f161-2e98-4a6d-a22c-7d588825bc05
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-W3A9VnNVz2z7FJjD_VMJv
+    type: CHART
+  CHART-explore-7-1:
+    children: []
+    id: CHART-explore-7-1
+    meta:
+      chartId: 7
+      height: 50
+      sliceName: Game concentration details
+      uuid: e86b58ea-f1f9-4905-95bd-e01ab651c1e8
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-W3A9VnNVz2z7FJjD_VMJv
+    type: CHART
+  CHART-explore-8-1:
+    children: []
+    id: CHART-explore-8-1
+    meta:
+      chartId: 8
+      height: 50
+      sliceName: Audience share by genre (%)
+      uuid: bb6d38ae-c527-4ece-9f63-a81f8ca5e3eb
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-yG1187kFhiG_ldGuHj3fk
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-W3A9VnNVz2z7FJjD_VMJv
+    - ROW-yG1187kFhiG_ldGuHj3fk
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Audience structure
+    type: HEADER
+  MARKDOWN-y_DmE2Jn1cnMxcWS1fBA1:
+    children: []
+    id: MARKDOWN-y_DmE2Jn1cnMxcWS1fBA1
+    meta:
+      code: "\u0416\u0430\u043D\u0440\u044B \u043F\u043E \u0434\u0430\u043D\u043D\u044B\
+        \u043C IGDB. \u0423 \u0438\u0433\u0440\u044B \u043D\u0435\u0441\u043A\u043E\
+        \u043B\u044C\u043A\u043E \u0436\u0430\u043D\u0440\u043E\u0432: \u0431\u0435\
+        \u0440\u0451\u0442\u0441\u044F \u0441\u0430\u043C\u044B\u0439 \u0447\u0430\
+        \u0441\u0442\u044B\u0439 \u0432 \u043A\u0430\u0442\u0430\u043B\u043E\u0433\
+        \u0435\r\n(\u043F\u043E\u044D\u0442\u043E\u043C\u0443 Adventure \u0437\u0430\
+        \u0432\u044B\u0448\u0435\u043D). Unknown: \u0438\u0433\u0440\u044B \u0431\u0435\
+        \u0437 igdb_id \u0443 Twitch, \u0432\u043A\u043B\u044E\u0447\u0430\u044F Just\
+        \ Chatting,\r\nCounter-Strike \u0438 Dota 2."
+      height: 12
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-yG1187kFhiG_ldGuHj3fk
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-W3A9VnNVz2z7FJjD_VMJv:
+    children:
+    - CHART-explore-5-1
+    - CHART-explore-6-1
+    - CHART-explore-7-1
+    id: ROW-W3A9VnNVz2z7FJjD_VMJv
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-yG1187kFhiG_ldGuHj3fk:
+    children:
+    - CHART-explore-8-1
+    - MARKDOWN-y_DmE2Jn1cnMxcWS1fBA1
+    id: ROW-yG1187kFhiG_ldGuHj3fk
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '5':
+      id: 5
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 7
+        - 8
+    '6':
+      id: 6
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 5
+        - 7
+        - 8
+    '7':
+      id: 7
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 5
+        - 6
+        - 8
+    '8':
+      id: 8
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 5
+        - 6
+        - 7
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 5
+    - 6
+    - 7
+    - 8
+  shared_label_colors:
+    MAX(share_pct): '#1FA8C9'
+    MAX(top3_share_pct): '#1FA8C9'
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  color_scheme: ''
+  label_colors: {}
+  color_scheme_domain: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+version: 1.0.0

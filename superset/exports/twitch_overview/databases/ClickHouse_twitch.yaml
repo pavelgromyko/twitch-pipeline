@@ -1,0 +1,13 @@
+database_name: ClickHouse twitch
+sqlalchemy_uri: clickhousedb+connect://default:XXXXXXXXXX@clickhouse:8123/twitch
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+uuid: 787097ea-9dff-40d9-afe4-abf2a3778082
+version: 1.0.0
