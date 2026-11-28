@@ -1,0 +1,74 @@
+table_name: game_viewer_hours
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: null
+schema: twitch
+sql: "WITH snaps AS (\r\n    SELECT\r\n        snapshot_ts,\r\n        dateDiff('second',\r\
+  \n            lagInFrame(snapshot_ts, 1, snapshot_ts) OVER (\r\n               \
+  \ ORDER BY snapshot_ts\r\n                ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED\
+  \ FOLLOWING\r\n            ),\r\n            snapshot_ts) AS gap_sec\r\n    FROM\
+  \ (SELECT DISTINCT snapshot_ts FROM twitch.last_day)\r\n)\r\nSELECT\r\n    s.game_id\
+  \ AS game_id,\r\n    argMax(s.game_name, s.snapshot_ts) AS game,\r\n    round(sum(s.viewer_count\
+  \ * g.gap_sec / 3600)) AS viewer_hours\r\nFROM twitch.last_day AS s\r\nINNER JOIN\
+  \ snaps AS g ON s.snapshot_ts = g.snapshot_ts\r\nWHERE g.gap_sec BETWEEN 1 AND 1800\r\
+  \n  AND s.game_id != 0\r\nGROUP BY s.game_id\r\nORDER BY viewer_hours DESC"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: cef0d01c-bbf0-4c6e-aba2-d009ff363cde
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: viewer_hours
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: game_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: UInt64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: game
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 787097ea-9dff-40d9-afe4-abf2a3778082

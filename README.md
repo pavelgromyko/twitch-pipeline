@@ -42,6 +42,7 @@ Screenshots taken on 2026-11-27. Metrics are computed among the top-2000 streams
 Dashboards, charts and datasets are exported to `superset/exports/` (one folder per dashboard),
 so they live in Git, not only inside the Superset container volume.
 SQL of the virtual datasets is also in `sql/05_superset_datasets.sql`.
+`pipeline_health` shows the results of the hourly data quality checks (`twitch.data_quality_log`).
 
 To restore the dashboards:
 

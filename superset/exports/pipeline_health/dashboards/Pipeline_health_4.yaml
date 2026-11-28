@@ -1,0 +1,158 @@
+dashboard_title: Pipeline health
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: daebb1ad-3996-4d7d-885d-ad7522bee834
+position:
+  CHART-explore-12-1:
+    children: []
+    id: CHART-explore-12-1
+    meta:
+      chartId: 12
+      height: 50
+      sliceName: Latest checks
+      uuid: 5ed161eb-c1eb-466b-85a6-31acfb583195
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-4t_L3BnlVD48WX84ieCS5
+    type: CHART
+  CHART-explore-13-1:
+    children: []
+    id: CHART-explore-13-1
+    meta:
+      chartId: 13
+      height: 50
+      sliceName: Data freshness (min)
+      uuid: 08d03513-04ed-44e1-9cb7-7e12bb760311
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-4t_L3BnlVD48WX84ieCS5
+    type: CHART
+  CHART-explore-14-1:
+    children: []
+    id: CHART-explore-14-1
+    meta:
+      chartId: 14
+      height: 50
+      sliceName: Smallest snapshot (streams)
+      uuid: 1cac6dd8-e537-466a-a60c-a32b639ea23b
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-4t_L3BnlVD48WX84ieCS5
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-7F76_JguEzsJb9y_nXdKT
+    - ROW-4t_L3BnlVD48WX84ieCS5
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Pipeline health
+    type: HEADER
+  MARKDOWN-A5wrp0xVdQpnhtlIIjzmE:
+    children: []
+    id: MARKDOWN-A5wrp0xVdQpnhtlIIjzmE
+    meta:
+      code: "\u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 \u0437\u0430\u043F\u0443\
+        \u0441\u043A\u0430\u044E\u0442\u0441\u044F \u0440\u0430\u0437 \u0432 \u0447\
+        \u0430\u0441 (:40 UTC), \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\
+        \u044B \u043F\u0438\u0448\u0443\u0442\u0441\u044F \u0432 twitch.data_quality_log.\r\
+        \nfreshness_minutes: WARN > 90, ERROR > 150. min_streams_per_snapshot: WARN\
+        \ < 1950, ERROR < 1850.\r\n\u0421\u043D\u0438\u043C\u043E\u043A \u0441\u043E\
+        \u0434\u0435\u0440\u0436\u0438\u0442 1987-2000 \u0441\u0442\u0440\u0438\u043C\
+        \u043E\u0432: Twitch \u0438\u043D\u043E\u0433\u0434\u0430 \u043E\u0442\u0434\
+        \u0430\u0451\u0442 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0438\
+        \u0437 99, \u043F\u043E\u0432\u0442\u043E\u0440\u044B \u0443\u0431\u0438\u0440\
+        \u0430\u044E\u0442\u0441\u044F \u0432 Spark."
+      height: 10
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-zBxUnJcx0-TeKJ_KgI8K-
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-4t_L3BnlVD48WX84ieCS5:
+    children:
+    - CHART-explore-12-1
+    - CHART-explore-13-1
+    - CHART-explore-14-1
+    id: ROW-4t_L3BnlVD48WX84ieCS5
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-7F76_JguEzsJb9y_nXdKT:
+    children:
+    - MARKDOWN-A5wrp0xVdQpnhtlIIjzmE
+    id: ROW-7F76_JguEzsJb9y_nXdKT
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '12':
+      id: 12
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 13
+        - 14
+    '13':
+      id: 13
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 12
+        - 14
+    '14':
+      id: 14
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 12
+        - 13
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 12
+    - 13
+    - 14
+  shared_label_colors:
+    MAX(value): '#1FA8C9'
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  color_scheme: ''
+  label_colors: {}
+  color_scheme_domain: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+version: 1.0.0

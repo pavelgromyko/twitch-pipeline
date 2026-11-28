@@ -1,57 +1,60 @@
 dashboard_title: Last 24 hours
 description: null
-css: null
+css: ''
 slug: null
-certified_by: null
-certification_details: null
+certified_by: ''
+certification_details: ''
 published: false
 uuid: 07a868fd-af44-496a-b669-c01a1d5d7470
-metadata:
-  chart_configuration:
-    '9':
-      id: 9
-      crossFilters:
-        scope: global
-        chartsInScope:
-        - 10
-    '10':
-      id: 10
-      crossFilters:
-        scope: global
-        chartsInScope:
-        - 9
-  global_chart_configuration:
-    scope:
-      rootPath:
-      - ROOT_ID
-      excluded: []
-    chartsInScope:
-    - 9
-    - 10
-  shared_label_colors:
-    Grand Theft Auto VI: '#1FA8C9'
-    Just Chatting: '#454E7C'
-    World of Warcraft: '#5AC189'
-    League of Legends: '#FF7F44'
-    Counter-Strike: '#666666'
-    viewers_per_snapshot: '#1FA8C9'
-  timed_refresh_immune_slices: []
-  expanded_slices: {}
-  refresh_frequency: 0
-  color_scheme: ''
-  label_colors: {}
-  color_scheme_domain: []
-  cross_filters_enabled: true
 position:
-  DASHBOARD_VERSION_KEY: v2
-  ROOT_ID:
-    children:
+  CHART-explore-10-1:
+    children: []
+    id: CHART-explore-10-1
+    meta:
+      chartId: 10
+      height: 50
+      sliceName: Top 5 games over time
+      uuid: e9b635b7-5bed-46ac-8131-26523901f530
+      width: 6
+    parents:
+    - ROOT_ID
     - GRID_ID
-    id: ROOT_ID
-    type: ROOT
+    - ROW-K98hA1_6T9lZJq83TA_sU
+    type: CHART
+  CHART-explore-11-1:
+    children: []
+    id: CHART-explore-11-1
+    meta:
+      chartId: 11
+      height: 50
+      sliceName: Viewer-hours by game (last 24h)
+      uuid: ece7ac71-dbf7-4928-9e03-90120c186e8a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-YH9WnxkoF_uvB1kY6niPu
+    type: CHART
+  CHART-explore-9-1:
+    children: []
+    id: CHART-explore-9-1
+    meta:
+      chartId: 9
+      height: 50
+      sliceName: Total viewers over time
+      uuid: 1af2c0aa-4542-4ddd-bdd9-397a27bd00a9
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-K98hA1_6T9lZJq83TA_sU
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
   GRID_ID:
     children:
-    - ROW-N-B5B069XF
+    - ROW-C3-ltO4hyhwPQANbpW_wM
+    - ROW-K98hA1_6T9lZJq83TA_sU
+    - ROW-YH9WnxkoF_uvB1kY6niPu
     id: GRID_ID
     parents:
     - ROOT_ID
@@ -61,44 +64,156 @@ position:
     meta:
       text: Last 24 hours
     type: HEADER
-  ROW-N-B5B069XF:
+  MARKDOWN-Yx8oqT2mscBToFXxWawtu:
+    children: []
+    id: MARKDOWN-Yx8oqT2mscBToFXxWawtu
+    meta:
+      code: "\u041E\u043A\u043D\u043E: \u0441\u043A\u043E\u043B\u044C\u0437\u044F\u0449\
+        \u0438\u0435 24 \u0447\u0430\u0441\u0430 \u0434\u043E \u043F\u043E\u0441\u043B\
+        \u0435\u0434\u043D\u0435\u0433\u043E \u0437\u0430\u0433\u0440\u0443\u0436\u0435\
+        \u043D\u043D\u043E\u0433\u043E \u0441\u043D\u0438\u043C\u043A\u0430 (\u043D\
+        \u0435 \u043A\u0430\u043B\u0435\u043D\u0434\u0430\u0440\u043D\u044B\u0435\
+        \ \u0441\u0443\u0442\u043A\u0438). \u0412\u0440\u0435\u043C\u044F \u0432 UTC.\r\
+        \n\u041C\u0435\u0442\u0440\u0438\u043A\u0438 \u0441\u0447\u0438\u0442\u0430\
+        \u044E\u0442\u0441\u044F \u0441\u0440\u0435\u0434\u0438 \u0442\u043E\u043F\
+        -2000 \u0441\u0442\u0440\u0438\u043C\u043E\u0432, \u0430 \u043D\u0435 \u043F\
+        \u043E \u0432\u0441\u0435\u0439 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\
+        \u043C\u0435.\r\n\u0414\u0430\u043D\u043D\u044B\u0435 \u043E\u0431\u043D\u043E\
+        \u0432\u043B\u044F\u044E\u0442\u0441\u044F \u0440\u0430\u0437 \u0432 \u0447\
+        \u0430\u0441, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043F\u043E\u0441\
+        \u043B\u0435\u0434\u043D\u044F\u044F \u0442\u043E\u0447\u043A\u0430 \u043C\
+        \u043E\u0436\u0435\u0442 \u043E\u0442\u0441\u0442\u0430\u0432\u0430\u0442\u044C\
+        \ \u0434\u043E 1 \u0447 10 \u043C\u0438\u043D.\r\nTotal viewers: \u0441\u0443\
+        \u043C\u043C\u0430 \u0437\u0440\u0438\u0442\u0435\u043B\u0435\u0439 \u043E\
+        \u0434\u043D\u043E\u0433\u043E \u0441\u043D\u0438\u043C\u043A\u0430.\r\nTop\
+        \ 5 games: \u043F\u044F\u0442\u044C \u0438\u0433\u0440 \u0441 \u043D\u0430\
+        \u0438\u0431\u043E\u043B\u044C\u0448\u0435\u0439 \u0430\u0443\u0434\u0438\u0442\
+        \u043E\u0440\u0438\u0435\u0439 \u0437\u0430 \u043E\u043A\u043D\u043E. \u0418\
+        \u0433\u0440\u0430, \u0432\u044B\u043F\u0430\u0432\u0448\u0430\u044F \u0438\
+        \u0437 \u0442\u043E\u043F-2000, \u0438\u0441\u0447\u0435\u0437\u0430\u0435\
+        \u0442 \u0438\u0437 \u0432\u044B\u0431\u043E\u0440\u043A\u0438."
+      height: 14
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-VGIl_K3z-jQ1G0UZxGOQK
+    type: MARKDOWN
+  MARKDOWN-eCjXUWMyQIDBT7HyD0zN_:
+    children: []
+    id: MARKDOWN-eCjXUWMyQIDBT7HyD0zN_
+    meta:
+      code: "\u0417\u0440\u0438\u0442\u0435\u043B\u0435-\u0447\u0430\u0441\u044B:\
+        \ \u0441\u0443\u043C\u043C\u0430 (\u0437\u0440\u0438\u0442\u0435\u043B\u0438\
+        \ \u0432 \u0441\u043D\u0438\u043C\u043A\u0435 \xD7 \u0432\u0440\u0435\u043C\
+        \u044F \u0441 \u043F\u0440\u0435\u0434\u044B\u0434\u0443\u0449\u0435\u0433\
+        \u043E \u0441\u043D\u0438\u043C\u043A\u0430). \u041E\u043A\u043D\u043E: 24\
+        \ \u0447\u0430\u0441\u0430 \u0434\u043E \u043F\u043E\u0441\u043B\u0435\u0434\
+        \u043D\u0435\u0433\u043E\r\n\u0441\u043D\u0438\u043C\u043A\u0430. \u0418\u043D\
+        \u0442\u0435\u0440\u0432\u0430\u043B\u044B \u0434\u043B\u0438\u043D\u043D\u0435\
+        \u0435 30 \u043C\u0438\u043D\u0443\u0442 \u0441\u0447\u0438\u0442\u0430\u044E\
+        \u0442\u0441\u044F \u0434\u044B\u0440\u043E\u0439 \u0438 \u043F\u0440\u043E\
+        \u043F\u0443\u0441\u043A\u0430\u044E\u0442\u0441\u044F. \u0418\u0433\u0440\
+        \u0430, \u0432\u044B\u043F\u0430\u0432\u0448\u0430\u044F \u0438\u0437 \u0442\
+        \u043E\u043F-2000,\r\n\u0432 \u044D\u0442\u043E\u043C \u0441\u043D\u0438\u043C\
+        \u043A\u0435 \u0441\u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044F \u043D\
+        \u0443\u043B\u0451\u043C, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043C\
+        \u0435\u043B\u043A\u0438\u0435 \u0438\u0433\u0440\u044B \u0437\u0430\u043D\
+        \u0438\u0436\u0435\u043D\u044B. \u0412 \u0441\u043F\u0438\u0441\u043A\u0435\
+        \ \u0435\u0441\u0442\u044C \u043D\u0435 \u0438\u0433\u0440\u044B\r\n(Just\
+        \ Chatting, Special Events, IRL)."
+      height: 14
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-YH9WnxkoF_uvB1kY6niPu
+    type: MARKDOWN
+  ROOT_ID:
     children:
-    - CHART-WFJY46T5
-    - CHART-U0YEOVPG
-    id: ROW-N-B5B069XF
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-C3-ltO4hyhwPQANbpW_wM:
+    children:
+    - MARKDOWN-Yx8oqT2mscBToFXxWawtu
+    id: ROW-C3-ltO4hyhwPQANbpW_wM
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-K98hA1_6T9lZJq83TA_sU:
+    children:
+    - CHART-explore-9-1
+    - CHART-explore-10-1
+    id: ROW-K98hA1_6T9lZJq83TA_sU
     meta:
       '0': ROOT_ID
       background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
     type: ROW
-    parents:
-    - ROOT_ID
-    - GRID_ID
-  CHART-WFJY46T5:
-    children: []
-    id: CHART-WFJY46T5
+  ROW-YH9WnxkoF_uvB1kY6niPu:
+    children:
+    - CHART-explore-11-1
+    - MARKDOWN-eCjXUWMyQIDBT7HyD0zN_
+    id: ROW-YH9WnxkoF_uvB1kY6niPu
     meta:
-      chartId: 9
-      height: 50
-      sliceName: Total viewers over time
-      uuid: 1af2c0aa-4542-4ddd-bdd9-397a27bd00a9
-      width: 4
-    type: CHART
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
     parents:
     - ROOT_ID
     - GRID_ID
-    - ROW-N-B5B069XF
-  CHART-U0YEOVPG:
-    children: []
-    id: CHART-U0YEOVPG
-    meta:
-      chartId: 10
-      height: 50
-      sliceName: Top 5 games over time
-      uuid: e9b635b7-5bed-46ac-8131-26523901f530
-      width: 4
-    type: CHART
-    parents:
-    - ROOT_ID
-    - GRID_ID
-    - ROW-N-B5B069XF
+    type: ROW
+metadata:
+  chart_configuration:
+    '9':
+      id: 9
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 10
+        - 11
+    '10':
+      id: 10
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 11
+    '11':
+      id: 11
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 9
+        - 10
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 9
+    - 10
+    - 11
+  shared_label_colors:
+    MAX(viewer_hours): '#1FA8C9'
+    viewers_per_snapshot: '#1FA8C9'
+    Just Chatting: '#1FA8C9'
+    Grand Theft Auto VI: '#454E7C'
+    Counter-Strike: '#5AC189'
+    Special Events: '#FF7F44'
+    World of Warcraft: '#666666'
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  refresh_frequency: 0
+  color_scheme: ''
+  label_colors: {}
+  color_scheme_domain: []
+  cross_filters_enabled: true
+  default_filters: '{}'
 version: 1.0.0
