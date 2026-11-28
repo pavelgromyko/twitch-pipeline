@@ -68,6 +68,7 @@ Docker Compose, MinIO (S3), Spark 3.5.3, Airflow 3.4.0 (LocalExecutor), ClickHou
 | `ingest_streams` | every 10 min | Top-2000 streams snapshot into `raw` |
 | `staging_and_load` | hourly at :15 | Spark `raw` to `staging` (last 2 days), then load into ClickHouse |
 | `dim_games` | daily 06:00 UTC | Games and IGDB genres into `raw`, then rebuild `dim_games` |
+| `data_quality` | hourly at :40 | Six checks on ClickHouse (freshness, gaps, duplicates, snapshot size, `dim_games` age and coverage). Results go to `twitch.data_quality_log`; ERROR fails the task, WARN skips it |
 
 ## Design decisions
 
@@ -85,6 +86,8 @@ Docker Compose, MinIO (S3), Spark 3.5.3, Airflow 3.4.0 (LocalExecutor), ClickHou
 - Data is collected only while the machine and Docker are running, so gaps are possible.
 - Local learning setup: default passwords in `docker-compose.yml` (Airflow, Postgres) must not be used anywhere else.
 - Official MinIO images are no longer published, so a pinned community mirror (`dappros/minio`) is used.
+- A snapshot holds ~2000 streams, not always exactly 2000: Twitch sometimes returns a page of 99,
+  and a stream that moves between pages while the 20 pages are read can appear twice (removed in Spark) or be missed.
 
 ## Run it
 
