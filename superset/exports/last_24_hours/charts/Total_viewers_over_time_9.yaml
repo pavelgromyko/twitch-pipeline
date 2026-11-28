@@ -9,15 +9,18 @@ params:
   slice_id: 9
   x_axis: snapshot_ts
   time_grain_sqla: PT10M
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
   metrics:
-  - expressionType: SQL
-    sqlExpression: SUM(viewer_count) / COUNT(DISTINCT snapshot_ts)
+  - aggregate: null
     column: null
-    aggregate: null
     datasourceWarning: false
+    expressionType: SQL
     hasCustomLabel: true
     label: viewers_per_snapshot
     optionName: metric_s31szmyyhwm_pks7rem9fnk
+    sqlExpression: SUM(viewer_count) / COUNT(DISTINCT snapshot_ts)
   groupby: []
   adhoc_filters:
   - clause: WHERE
@@ -25,6 +28,7 @@ params:
     expressionType: SIMPLE
     operator: TEMPORAL_RANGE
     subject: snapshot_ts
+  order_desc: true
   row_limit: 10000
   truncate_metric: true
   show_empty_columns: true
@@ -38,29 +42,25 @@ params:
   sort_series_type: sum
   color_scheme: supersetColors
   seriesType: line
-  only_total: true
-  opacity: 0.2
-  markerSize: 6
+  show_value: false
   show_legend: true
   legendType: scroll
   legendOrientation: top
-  x_axis_time_format: smart_date
+  x_axis_time_format: '%Y-%m-%d %H:%M:%S'
   rich_tooltip: true
   tooltipTimeFormat: smart_date
   y_axis_format: SMART_NUMBER
   truncateXAxis: true
-  y_axis_bounds:
-  - null
-  - null
   extra_form_data: {}
   dashboards:
   - 3
 query_context: '{"datasource":{"id":6,"type":"table"},"force":false,"queries":[{"filters":[{"col":"snapshot_ts","op":"TEMPORAL_RANGE","val":"No
-  filter"}],"extras":{"time_grain_sqla":"PT10M","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"PT10M","columnType":"BASE_AXIS","sqlExpression":"snapshot_ts","label":"snapshot_ts","expressionType":"SQL"}],"metrics":[{"expressionType":"SQL","sqlExpression":"SUM(viewer_count)
-  / COUNT(DISTINCT snapshot_ts)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"viewers_per_snapshot","optionName":"metric_s31szmyyhwm_pks7rem9fnk"}],"orderby":[[{"expressionType":"SQL","sqlExpression":"SUM(viewer_count)
-  / COUNT(DISTINCT snapshot_ts)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"viewers_per_snapshot","optionName":"metric_s31szmyyhwm_pks7rem9fnk"},false]],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["snapshot_ts"],"columns":[],"aggregates":{"viewers_per_snapshot":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"6__table","viz_type":"echarts_timeseries_line","slice_id":9,"x_axis":"snapshot_ts","time_grain_sqla":"PT10M","metrics":[{"expressionType":"SQL","sqlExpression":"SUM(viewer_count)
-  / COUNT(DISTINCT snapshot_ts)","column":null,"aggregate":null,"datasourceWarning":false,"hasCustomLabel":true,"label":"viewers_per_snapshot","optionName":"metric_s31szmyyhwm_pks7rem9fnk"}],"groupby":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
-  filter","expressionType":"SIMPLE","operator":"TEMPORAL_RANGE","subject":"snapshot_ts"}],"row_limit":10000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title_margin":15,"y_axis_title_margin":15,"y_axis_title_position":"Left","sort_series_type":"sum","color_scheme":"supersetColors","seriesType":"line","only_total":true,"opacity":0.2,"markerSize":6,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"smart_date","rich_tooltip":true,"tooltipTimeFormat":"smart_date","y_axis_format":"SMART_NUMBER","truncateXAxis":true,"y_axis_bounds":[null,null],"extra_form_data":{},"dashboards":[3],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+  filter"}],"extras":{"time_grain_sqla":"PT10M","having":"","where":""},"applied_time_extras":{},"columns":[{"timeGrain":"PT10M","columnType":"BASE_AXIS","sqlExpression":"snapshot_ts","label":"snapshot_ts","expressionType":"SQL"}],"metrics":[{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":true,"label":"viewers_per_snapshot","optionName":"metric_s31szmyyhwm_pks7rem9fnk","sqlExpression":"SUM(viewer_count)
+  / COUNT(DISTINCT snapshot_ts)"}],"orderby":[[{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":true,"label":"viewers_per_snapshot","optionName":"metric_s31szmyyhwm_pks7rem9fnk","sqlExpression":"SUM(viewer_count)
+  / COUNT(DISTINCT snapshot_ts)"},false]],"annotation_layers":[],"row_limit":10000,"series_columns":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"time_offsets":[],"post_processing":[{"operation":"pivot","options":{"index":["snapshot_ts"],"columns":[],"aggregates":{"viewers_per_snapshot":{"operator":"mean"}},"drop_missing_columns":false}},{"operation":"flatten"}]}],"form_data":{"datasource":"6__table","viz_type":"echarts_timeseries_line","slice_id":9,"x_axis":"snapshot_ts","time_grain_sqla":"PT10M","x_axis_sort_asc":true,"x_axis_sort_series":"name","x_axis_sort_series_ascending":true,"metrics":[{"aggregate":null,"column":null,"datasourceWarning":false,"expressionType":"SQL","hasCustomLabel":true,"label":"viewers_per_snapshot","optionName":"metric_s31szmyyhwm_pks7rem9fnk","sqlExpression":"SUM(viewer_count)
+  / COUNT(DISTINCT snapshot_ts)"}],"groupby":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","expressionType":"SIMPLE","operator":"TEMPORAL_RANGE","subject":"snapshot_ts"}],"order_desc":true,"row_limit":10000,"truncate_metric":true,"show_empty_columns":true,"comparison_type":"values","annotation_layers":[],"forecastPeriods":10,"forecastInterval":0.8,"x_axis_title_margin":15,"y_axis_title_margin":15,"y_axis_title_position":"Left","sort_series_type":"sum","color_scheme":"supersetColors","seriesType":"line","show_value":false,"show_legend":true,"legendType":"scroll","legendOrientation":"top","x_axis_time_format":"%Y-%m-%d
+  %H:%M:%S","rich_tooltip":true,"tooltipTimeFormat":"smart_date","y_axis_format":"SMART_NUMBER","truncateXAxis":true,"extra_form_data":{},"dashboards":[3],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
 cache_timeout: null
 uuid: 1af2c0aa-4542-4ddd-bdd9-397a27bd00a9
 version: 1.0.0
